@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathEtc | March Report Card Campaign Strategy 2025</title>
+    <title>MathEtc March Campaign 2026 - Strategic Roadmap</title>
     
     <style>
         * {
@@ -23,26 +23,27 @@
             --light: #f8f9fa;
             --text: #2c3e50;
             --text-muted: #7f8c8d;
+            --naira: #27ae60;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
             color: var(--text);
             line-height: 1.6;
             background: #ffffff;
         }
 
         /* HEADER */
-        .presentation-header {
+        .campaign-header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .presentation-header::before {
+        .campaign-header::before {
             content: '';
             position: absolute;
             top: 0;
@@ -56,7 +57,7 @@
         .header-content {
             position: relative;
             z-index: 2;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -71,49 +72,32 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .presentation-header h1 {
+        .campaign-header h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
-        .presentation-header .subtitle {
+        .campaign-header .subtitle {
             font-size: 1.3rem;
             opacity: 0.9;
             font-weight: 300;
             margin-bottom: 2rem;
         }
 
-        .meta-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .meta-item {
-            text-align: center;
-        }
-
-        .meta-label {
-            font-size: 0.85rem;
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .meta-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 0.25rem;
+        .timeline-badge {
+            display: inline-block;
+            background: var(--success);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         /* NAVIGATION */
-        .strategy-nav {
+        .main-nav {
             position: sticky;
             top: 0;
             background: white;
@@ -135,14 +119,6 @@
             height: 3px;
         }
 
-        .nav-container::-webkit-scrollbar-track {
-            background: var(--light);
-        }
-
-        .nav-container::-webkit-scrollbar-thumb {
-            background: var(--accent);
-        }
-
         .nav-item {
             padding: 1rem 1.5rem;
             white-space: nowrap;
@@ -159,7 +135,7 @@
             border-bottom-color: var(--accent);
         }
 
-        /* SECTION CONTAINER */
+        /* SECTIONS */
         .section {
             padding: 4rem 2rem;
             max-width: 1400px;
@@ -180,55 +156,16 @@
         .section-intro {
             font-size: 1.2rem;
             color: var(--text-muted);
-            max-width: 800px;
+            max-width: 900px;
             margin-bottom: 3rem;
-        }
-
-        /* EXECUTIVE SUMMARY */
-        .exec-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .summary-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--accent);
-            transition: transform 0.3s ease;
-        }
-
-        .summary-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .summary-card h3 {
-            color: var(--accent);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .summary-card .big-stat {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .summary-card p {
-            color: var(--text-muted);
+            line-height: 1.8;
         }
 
         /* INSIGHT BOX */
         .insight-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 12px;
             margin: 3rem 0;
             position: relative;
@@ -238,55 +175,45 @@
         .insight-box::before {
             content: '💡';
             position: absolute;
-            font-size: 10rem;
+            font-size: 12rem;
             opacity: 0.1;
             right: -2rem;
-            top: -2rem;
+            top: -3rem;
         }
 
         .insight-box h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
             position: relative;
         }
 
         .insight-box p {
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.15rem;
+            line-height: 1.9;
             position: relative;
         }
 
-        /* JOURNEY MAP */
-        .journey-container {
-            position: relative;
-            margin: 3rem 0;
-        }
-
-        .journey-timeline {
+        /* JOURNEY PHASES */
+        .journey-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            position: relative;
+            margin-top: 2rem;
         }
 
-        .journey-timeline::before {
-            content: '';
-            position: absolute;
-            top: 50px;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(to right, var(--accent), var(--success));
-            z-index: 0;
-        }
-
-        .journey-phase {
+        .phase-card {
             background: white;
-            padding: 2rem;
             border-radius: 12px;
+            padding: 2rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: relative;
-            z-index: 2;
+            border-top: 5px solid var(--accent);
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .phase-number {
@@ -300,8 +227,13 @@
             justify-content: center;
             font-weight: 800;
             font-size: 1.5rem;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+
+        .phase-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 700;
         }
 
         .phase-tag {
@@ -317,93 +249,95 @@
             margin-bottom: 1rem;
         }
 
-        .journey-phase h3 {
-            font-size: 1.4rem;
+        .phase-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .phase-section h4 {
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
         }
 
-        .emotion-state {
-            background: #fff3cd;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 3px solid var(--warning);
-        }
-
-        .emotion-state strong {
-            color: var(--warning);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .pain-list {
-            background: #f8d7da;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 3px solid var(--danger);
-        }
-
-        .pain-list strong {
-            color: var(--danger);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .pain-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .pain-list li {
-            padding: 0.3rem 0;
+        .phase-section p,
+        .phase-section ul {
             color: var(--text);
+            line-height: 1.7;
         }
 
-        .pain-list li::before {
-            content: '→ ';
-            color: var(--danger);
-            font-weight: bold;
+        .phase-section ul {
+            padding-left: 1.5rem;
         }
 
-        .solution-preview {
-            background: #d4edda;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 3px solid var(--success);
-        }
-
-        .solution-preview strong {
-            color: var(--success);
-            display: block;
+        .phase-section li {
             margin-bottom: 0.5rem;
         }
 
-        /* CONTENT CARDS */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .message-box {
+            background: var(--light);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            font-style: italic;
+            color: var(--text);
+            margin-top: 1rem;
         }
 
-        .content-card {
+        /* PAIN-SOLUTION TABLE */
+        .pain-solution-table {
+            width: 100%;
+            border-collapse: collapse;
             background: white;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            margin-top: 2rem;
         }
 
-        .content-card:hover {
+        .pain-solution-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .pain-solution-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--light);
+            vertical-align: top;
+        }
+
+        .pain-solution-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pain-solution-table tr:hover {
+            background: var(--light);
+        }
+
+        /* VIDEO CARDS */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
 
-        .content-header {
+        .video-header {
             background: linear-gradient(135deg, var(--accent), var(--highlight));
             color: white;
             padding: 1.5rem;
@@ -414,8 +348,8 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             background: rgba(255,255,255,0.2);
             backdrop-filter: blur(10px);
             border-radius: 50%;
@@ -423,10 +357,10 @@
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
-        .content-phase-label {
+        .video-phase-label {
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -434,16 +368,16 @@
             margin-bottom: 0.5rem;
         }
 
-        .content-card h3 {
+        .video-header h3 {
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
         }
 
-        .content-body {
+        .video-body {
             padding: 1.5rem;
         }
 
-        .target-audience {
+        .target-badge {
             display: inline-block;
             background: var(--light);
             color: var(--accent);
@@ -461,46 +395,159 @@
             border-left: 3px solid var(--accent);
             padding-left: 1rem;
             margin: 1rem 0;
+            line-height: 1.6;
         }
 
-        .content-meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+        .video-details {
             margin-top: 1rem;
             padding-top: 1rem;
             border-top: 1px solid var(--light);
         }
 
-        .meta-field {
-            font-size: 0.85rem;
+        .detail-item {
+            margin-bottom: 0.75rem;
         }
 
-        .meta-field strong {
-            display: block;
+        .detail-item strong {
             color: var(--text-muted);
+            font-size: 0.85rem;
+            display: block;
             margin-bottom: 0.25rem;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        /* TIMELINE GANTT */
-        .timeline-gantt {
+        /* PRODUCTION SECTION */
+        .production-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .production-card {
             background: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            overflow-x: auto;
         }
 
-        .gantt-table {
+        .production-card h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .production-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .production-card li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .production-card li:last-child {
+            border-bottom: none;
+        }
+
+        .production-card li strong {
+            color: var(--primary);
+        }
+
+        /* STUDIO PARTNERSHIP */
+        .studio-highlight {
+            background: linear-gradient(135deg, var(--naira), #229954);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .studio-highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .studio-pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .price-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .price-box .amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+
+        .price-box .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .shoot-schedule {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .shoot-schedule h4 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .timeline-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .timeline-item {
+            text-align: center;
+        }
+
+        .timeline-item .week {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .activity {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* BUDGET SECTION */
+        .budget-overview {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .budget-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 800px;
+            margin-top: 1.5rem;
         }
 
-        .gantt-table th {
+        .budget-table th {
             background: var(--primary);
             color: white;
             padding: 1rem;
@@ -508,73 +555,178 @@
             font-weight: 600;
         }
 
-        .gantt-table td {
+        .budget-table td {
             padding: 1rem;
             border-bottom: 1px solid var(--light);
         }
 
-        .gantt-table tr:hover {
+        .budget-table tr:hover {
             background: var(--light);
         }
 
-        .week-cell {
-            text-align: center;
-            position: relative;
+        .budget-category {
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        .activity-bar {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
+        .budget-amount {
+            text-align: right;
             font-weight: 600;
+            color: var(--naira);
         }
 
-        .activity-bar.high {
-            background: var(--danger);
+        .budget-total {
+            background: var(--light) !important;
+            font-weight: 800;
+            font-size: 1.2rem;
         }
 
-        .activity-bar.medium {
-            background: var(--warning);
+        .budget-total td {
+            border-top: 3px solid var(--primary);
+            border-bottom: 3px solid var(--primary);
+            padding: 1.5rem 1rem;
         }
 
-        .activity-bar.low {
-            background: var(--success);
-        }
-
-        /* METRICS DASHBOARD */
-        .metrics-grid {
+        .conversion-split {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .metric-card {
+        .conversion-card {
             background: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
-            transition: transform 0.3s ease;
         }
 
-        .metric-card:hover {
-            transform: scale(1.05);
+        .conversion-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .conversion-card .big-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 1rem 0;
+        }
+
+        /* EMAIL CAMPAIGN SECTION */
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .email-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--warning);
+        }
+
+        .email-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .email-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .email-badge {
+            background: var(--light);
+            color: var(--text);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .email-subject {
+            background: #fffbea;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--warning);
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        /* CTA STRATEGY */
+        .cta-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .cta-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .cta-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--light);
+            vertical-align: top;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .cta-badge.soft {
+            background: #d4edda;
+            color: var(--success);
+        }
+
+        .cta-badge.medium {
+            background: #fff3cd;
+            color: var(--warning);
+        }
+
+        .cta-badge.hard {
+            background: #f8d7da;
+            color: var(--danger);
+        }
+
+        /* METRICS */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .metric-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
         }
 
         .metric-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.8rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .metric-value {
@@ -586,174 +738,78 @@
 
         .metric-label {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
-        /* LOCATION MAP */
-        .location-overview {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-            align-items: start;
-        }
-
-        .service-list {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .service-list h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .service-item {
-            padding: 0.75rem;
-            background: var(--light);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .service-item:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateX(5px);
-        }
-
-        .service-item::before {
-            content: '📍';
-        }
-
-        .delivery-modes {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .mode-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--accent);
-        }
-
-        .mode-card h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .mode-badge {
-            display: inline-block;
-            background: var(--light);
-            color: var(--accent);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        /* CTA STRATEGY */
-        .cta-flow {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-top: 2rem;
-        }
-
-        .cta-flow table {
+        /* CAMPAIGN TIMELINE */
+        .timeline-table {
             width: 100%;
             border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 2rem;
         }
 
-        .cta-flow th {
+        .timeline-table th {
             background: var(--primary);
             color: white;
             padding: 1rem;
             text-align: left;
         }
 
-        .cta-flow td {
+        .timeline-table td {
             padding: 1rem;
             border-bottom: 1px solid var(--light);
             vertical-align: top;
         }
 
-        .cta-type {
+        .amplification-badge {
             display: inline-block;
-            padding: 0.3rem 0.8rem;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
             font-weight: 600;
+            font-size: 0.85rem;
         }
 
-        .cta-type.soft {
+        .amplification-badge.low {
             background: #d4edda;
             color: var(--success);
         }
 
-        .cta-type.medium {
+        .amplification-badge.medium {
             background: #fff3cd;
             color: var(--warning);
         }
 
-        .cta-type.hard {
+        .amplification-badge.high {
             background: #f8d7da;
             color: var(--danger);
         }
 
         /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .journey-timeline {
-                grid-template-columns: 1fr;
-            }
-
-            .journey-timeline::before {
-                left: 25px;
-                top: 0;
-                bottom: 0;
-                width: 4px;
-                height: auto;
-            }
-
-            .location-overview {
-                grid-template-columns: 1fr;
-            }
-
-            .service-columns {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
-            .meta-info {
-                gap: 1.5rem;
+            .production-grid,
+            .conversion-split {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid,
+            .email-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr;
             }
 
             .section {
                 padding: 3rem 1rem;
             }
 
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .content-meta {
-                grid-template-columns: 1fr;
+            .campaign-header {
+                padding: 3rem 1rem;
             }
         }
 
@@ -762,813 +818,912 @@
             scroll-behavior: smooth;
         }
 
-        /* PRINT STYLES */
+        /* PRINT FRIENDLY */
         @media print {
-            .strategy-nav {
+            .main-nav {
                 position: static;
             }
-
+            
             .section {
                 page-break-inside: avoid;
             }
-        }
-
-        /* INTERACTIVE ELEMENTS */
-        .expandable {
-            cursor: pointer;
-            position: relative;
-        }
-
-        .expandable::after {
-            content: '▼';
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .expandable.expanded::after {
-            transform: rotate(180deg);
-        }
-
-        .expandable-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .expandable.expanded + .expandable-content {
-            max-height: 2000px;
-        }
-
-        /* ACTION BUTTONS */
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--highlight);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--accent);
-            border: 2px solid var(--accent);
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-success {
-            background: var(--success);
-            color: white;
-        }
-
-        .btn-success:hover {
-            background: #008ba3;
-            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <!-- PRESENTATION HEADER -->
-    <header class="presentation-header">
+    <!-- HEADER -->
+    <header class="campaign-header">
         <div class="header-content">
-            <div class="campaign-badge">STRATEGIC CAMPAIGN PROPOSAL</div>
-            <h1>March Report Card Campaign 2025</h1>
+            <div class="campaign-badge">STRATEGIC CAMPAIGN ROADMAP</div>
+            <h1>MathEtc March Report Card Campaign 2025</h1>
             <p class="subtitle">Turning Parent Anxiety Into Academic Action</p>
-            
-            <div class="meta-info">
-                <div class="meta-item">
-                    <div class="meta-label">Campaign Duration</div>
-                    <div class="meta-value">4 Weeks</div>
-                </div>
-                <div class="meta-item">
-                    <div class="meta-label">Content Pieces</div>
-                    <div class="meta-value">6 Videos</div>
-                </div>
-                <div class="meta-item">
-                    <div class="meta-label">Target Market</div>
-                    <div class="meta-value">Maryland</div>
-                </div>
-                <div class="meta-item">
-                    <div class="meta-label">Service Areas</div>
-                    <div class="meta-value">12 Cities</div>
-                </div>
-            </div>
+            <div class="timeline-badge">🎬 Production: First Week of March | 📤 Distribution: Second Week of March</div>
         </div>
     </header>
 
     <!-- NAVIGATION -->
-    <nav class="strategy-nav">
+    <nav class="main-nav">
         <div class="nav-container">
-            <a href="#executive" class="nav-item active">Executive Summary</a>
-            <a href="#strategy" class="nav-item">Strategic Framework</a>
+            <a href="#framework" class="nav-item active">Strategic Framework</a>
             <a href="#journey" class="nav-item">Customer Journey</a>
-            <a href="#content" class="nav-item">Content Plan</a>
-            <a href="#timeline" class="nav-item">Timeline & Rollout</a>
-            <a href="#locations" class="nav-item">Geographic Strategy</a>
+            <a href="#pain-solution" class="nav-item">Pain → Solution</a>
+            <a href="#content" class="nav-item">6 Video Content Plan</a>
+            <a href="#production" class="nav-item">Production & Partnership</a>
+            <a href="#budget" class="nav-item">Budget Breakdown</a>
+            <a href="#email" class="nav-item">Email Campaign</a>
+            <a href="#cta" class="nav-item">CTA Strategy</a>
             <a href="#metrics" class="nav-item">Success Metrics</a>
-            <a href="#budget" class="nav-item">Investment & ROI</a>
-            <a href="#approval" class="nav-item">Next Steps</a>
+            <a href="#timeline" class="nav-item">Campaign Timeline</a>
         </div>
     </nav>
 
-    <!-- EXECUTIVE SUMMARY -->
-    <section id="executive" class="section">
-        <h2 class="section-title">Executive Summary</h2>
-        <p class="section-intro">A data-driven, emotionally intelligent marketing campaign designed to position MathEtc as the go-to academic intervention during Maryland's most anxious parenting moment: March report card season.</p>
-
-        <div class="exec-summary">
-            <div class="summary-card">
-                <h3>The Opportunity</h3>
-                <div class="big-stat">March 15</div>
-                <p>Report cards drop across Maryland school districts, creating a 4-week window of peak parent anxiety and decision-making urgency.</p>
-            </div>
-
-            <div class="summary-card">
-                <h3>The Approach</h3>
-                <div class="big-stat">3 Phases</div>
-                <p>Meet families at every emotional stage: Anticipation (pre-report), Crisis (D-Day), and Recovery (post-report action).</p>
-            </div>
-
-            <div class="summary-card">
-                <h3>The Format</h3>
-                <div class="big-stat">Cinematic</div>
-                <p>Authentic storytelling via young content creators (25-28) speaking directly to parents and students. Studio-shot, multi-angle, emotionally resonant.</p>
-            </div>
-
-            <div class="summary-card">
-                <h3>The Market</h3>
-                <div class="big-stat">12 Cities</div>
-                <p>Baltimore, Silver Spring, Rockville, Bethesda, Columbia, Towson, and surrounding Maryland metro areas. In-person + online delivery.</p>
-            </div>
-        </div>
+    <!-- STRATEGIC FRAMEWORK -->
+    <section id="framework" class="section">
+        <h2 class="section-title">Strategic Framework</h2>
+        <p class="section-intro">Report Card Season = Peak Parent Anxiety + Student Stress. This is our opportunity window.</p>
 
         <div class="insight-box">
-            <h3>Core Strategic Insight</h3>
-            <p>Parents don't just need tutoring—they need <strong>peace of mind</strong>. Students don't just need better grades—they need <strong>confidence restoration</strong>. Report card season is the perfect storm: high emotion + high intent + clear timeline. We're not selling sessions. We're selling relief from anxiety and a roadmap out of academic struggle.</p>
+            <h3>The Core Insight</h3>
+            <p>Parents don't just need tutoring. They need <strong>peace of mind</strong>. Students don't just need help passing. They need <strong>confidence restoration</strong>. The report card is both a trigger point (pain) and a decision point (action). March creates a high-intent window where parents are actively seeking solutions when they see declining or poor performance.</p>
         </div>
-    </section>
 
-    <!-- STRATEGIC FRAMEWORK -->
-    <section id="strategy" class="section">
-        <h2 class="section-title">Strategic Framework</h2>
-        <p class="section-intro">How we move from pain awareness to problem-solving enrollment.</p>
-
-        <div class="journey-container">
-            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">The Emotional Progression</h3>
-            
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 3rem;">
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr style="background: var(--primary); color: white;">
-                            <th style="padding: 1rem; text-align: left;">Stage</th>
-                            <th style="padding: 1rem; text-align: left;">Emotion</th>
-                            <th style="padding: 1rem; text-align: left;">Pain Point</th>
-                            <th style="padding: 1rem; text-align: left;">MathEtc Solution</th>
-                            <th style="padding: 1rem; text-align: left;">Marketing Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--light);">
-                            <td style="padding: 1rem;"><strong>Pre-Report</strong></td>
-                            <td style="padding: 1rem;">Anxiety, Denial, Hope</td>
-                            <td style="padding: 1rem;">"Should I wait or act now?"</td>
-                            <td style="padding: 1rem;">Early intervention prevents disasters</td>
-                            <td style="padding: 1rem;"><em>"Trust your gut. Don't wait for confirmation."</em></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--light);">
-                            <td style="padding: 1rem;"><strong>Report Week</strong></td>
-                            <td style="padding: 1rem;">Shock, Guilt, Panic</td>
-                            <td style="padding: 1rem;">"What do I do NOW?"</td>
-                            <td style="padding: 1rem;">Diagnostic tutoring finds the root cause</td>
-                            <td style="padding: 1rem;"><em>"This hurts, but it's not the final word."</em></td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 1rem;"><strong>Post-Report</strong></td>
-                            <td style="padding: 1rem;">Determination, Overwhelm</td>
-                            <td style="padding: 1rem;">"How do I make sure this doesn't happen again?"</td>
-                            <td style="padding: 1rem;">Custom recovery plans with measurable progress</td>
-                            <td style="padding: 1rem;"><em>"Next term doesn't have to be a repeat."</em></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Brand Positioning Throughout Campaign</h3>
-            
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 2rem;">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.8rem;">Brand Positioning Throughout Campaign</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; padding: 1.5rem;">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
-                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Empathetic</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">We understand the pain without pitying</p>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Empathetic but not pitying</h4>
+                    <p style="color: var(--text-muted);">We understand the pain but we're not dwelling in it</p>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+                <div style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💪</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Confident but not arrogant</h4>
+                    <p style="color: var(--text-muted);">We know we can help, but we're not making wild promises</p>
+                </div>
+                <div style="text-align: center; padding: 1.5rem;">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
-                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Confident</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">We know we can help without arrogance</p>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Real but not raw</h4>
+                    <p style="color: var(--text-muted);">Honest about the struggle without being depressing</p>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+                <div style="text-align: center; padding: 1.5rem;">
                     <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
-                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Action-Oriented</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Every piece ends with a clear next step</p>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Action-oriented</h4>
+                    <p style="color: var(--text-muted);">Every piece of content ends with a clear, emotionally resonant CTA</p>
                 </div>
             </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 2rem;">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.8rem;">MathEtc Differentiators to Weave In</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 1rem; border-bottom: 1px solid var(--light); display: flex; gap: 1rem;">
+                    <span style="color: var(--accent); font-size: 1.5rem;">1</span>
+                    <div>
+                        <strong style="color: var(--primary);">Diagnostic approach</strong> — We don't start with Chapter 7 if the problem started in Chapter 2
+                    </div>
+                </li>
+                <li style="padding: 1rem; border-bottom: 1px solid var(--light); display: flex; gap: 1rem;">
+                    <span style="color: var(--accent); font-size: 1.5rem;">2</span>
+                    <div>
+                        <strong style="color: var(--primary);">Customized learning plans</strong> — Not one-size-fits-all
+                    </div>
+                </li>
+                <li style="padding: 1rem; border-bottom: 1px solid var(--light); display: flex; gap: 1rem;">
+                    <span style="color: var(--accent); font-size: 1.5rem;">3</span>
+                    <div>
+                        <strong style="color: var(--primary);">Consistent support</strong> — Not just exam cramming; sustained improvement
+                    </div>
+                </li>
+                <li style="padding: 1rem; border-bottom: 1px solid var(--light); display: flex; gap: 1rem;">
+                    <span style="color: var(--accent); font-size: 1.5rem;">4</span>
+                    <div>
+                        <strong style="color: var(--primary);">Student confidence focus</strong> — We rebuild belief, not just grades
+                    </div>
+                </li>
+                <li style="padding: 1rem; display: flex; gap: 1rem;">
+                    <span style="color: var(--accent); font-size: 1.5rem;">5</span>
+                    <div>
+                        <strong style="color: var(--primary);">Parent peace of mind</strong> — You're not alone in this anymore
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- CUSTOMER JOURNEY -->
     <section id="journey" class="section">
         <h2 class="section-title">The Customer Journey Map</h2>
-        <p class="section-intro">Three distinct emotional phases requiring tailored messaging and content.</p>
+        <p class="section-intro">Three distinct emotional phases requiring tailored messaging and content delivery.</p>
 
-        <div class="journey-timeline">
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 3rem; text-align: center;">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">The Progression</h3>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 1.2rem; font-weight: 600;">
+                <span style="background: var(--light); padding: 1rem 1.5rem; border-radius: 8px;">AWARENESS<br/><small style="font-weight: normal; opacity: 0.7;">(Pre-Report)</small></span>
+                <span style="color: var(--accent);">→</span>
+                <span style="background: var(--light); padding: 1rem 1.5rem; border-radius: 8px;">CONSIDERATION<br/><small style="font-weight: normal; opacity: 0.7;">(Report Week)</small></span>
+                <span style="color: var(--accent);">→</span>
+                <span style="background: var(--light); padding: 1rem 1.5rem; border-radius: 8px;">DECISION<br/><small style="font-weight: normal; opacity: 0.7;">(Post-Report)</small></span>
+                <span style="color: var(--accent);">→</span>
+                <span style="background: var(--success); color: white; padding: 1rem 1.5rem; border-radius: 8px;">ACTION<br/><small style="font-weight: normal; opacity: 0.9;">(Enrollment)</small></span>
+            </div>
+        </div>
+
+        <div class="journey-grid">
             <!-- PHASE 1 -->
-            <div class="journey-phase">
-                <div class="phase-number">1</div>
+            <div class="phase-card">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <div class="phase-title">Pre-Report Phase</div>
+                </div>
                 <span class="phase-tag">EARLY MARCH • WEEK 1-2</span>
-                <h3>Anticipation Phase</h3>
                 
-                <div class="emotion-state">
-                    <strong>Emotional State:</strong>
-                    Parents feel gut instinct something's wrong. Students silently drowning under pressure but hiding it.
+                <div class="phase-section">
+                    <h4>Emotional State:</h4>
+                    <p>Anticipation, anxiety, denial, hope</p>
                 </div>
 
-                <div class="pain-list">
-                    <strong>Pain Points:</strong>
+                <div class="phase-section">
+                    <h4>Pain Points:</h4>
                     <ul>
-                        <li>"I think my child is struggling but should I wait?"</li>
-                        <li>"I'm behind but maybe I can pull it off"</li>
-                        <li>Fear of being "that parent" vs. finding out too late</li>
+                        <li><strong>Parents:</strong> "I <em>think</em> my child is struggling but I'm not sure. Should I wait for the report card or act now?"</li>
+                        <li><strong>Students:</strong> "I know I'm behind but maybe I can still pull it off before exams."</li>
                     </ul>
                 </div>
 
-                <div class="solution-preview">
-                    <strong>MathEtc Solution:</strong>
-                    Early intervention catches problems before they become disasters. Trust your instincts. Act while there's time.
+                <div class="phase-section">
+                    <h4>Content Goal:</h4>
+                    <p>Make the invisible visible. Surface the anxiety. Normalize seeking help <em>before</em> the damage is done.</p>
                 </div>
 
-                <div style="background: var(--light); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--primary);">Content Released:</strong>
-                    <ul style="padding-left: 1.5rem; color: var(--text);">
-                        <li>Video 1: "That Feeling You're Ignoring"</li>
-                        <li>Video 2: "The Pressure They Won't Tell You About"</li>
-                    </ul>
+                <div class="message-box">
+                    <strong>Marketing Message:</strong> "You already know something's not right. Don't wait for the report card to confirm it."
                 </div>
             </div>
 
             <!-- PHASE 2 -->
-            <div class="journey-phase">
-                <div class="phase-number">2</div>
+            <div class="phase-card">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <div class="phase-title">Report Card Week</div>
+                </div>
                 <span class="phase-tag">MID MARCH • WEEK 3</span>
-                <h3>D-Day Phase</h3>
                 
-                <div class="emotion-state">
-                    <strong>Emotional State:</strong>
-                    Shock, disappointment, guilt, panic. The grades are in and they're worse than expected.
+                <div class="phase-section">
+                    <h4>Emotional State:</h4>
+                    <p>Shock, disappointment, guilt, panic</p>
                 </div>
 
-                <div class="pain-list">
-                    <strong>Pain Points:</strong>
+                <div class="phase-section">
+                    <h4>Pain Points:</h4>
                     <ul>
-                        <li>"The grades are worse than I thought. What NOW?"</li>
-                        <li>"Everyone's disappointed. I feel stupid."</li>
-                        <li>"How did I miss this? Is it too late?"</li>
+                        <li><strong>Parents:</strong> "The grades are worse than I thought. What do I do NOW? Is it too late?"</li>
+                        <li><strong>Students:</strong> "I failed/underperformed. Everyone's disappointed. I feel stupid."</li>
                     </ul>
                 </div>
 
-                <div class="solution-preview">
-                    <strong>MathEtc Solution:</strong>
-                    This report card hurts, but it's not the final word. Diagnostic tutoring identifies the root breakdown. 6-8 weeks is enough to create change.
+                <div class="phase-section">
+                    <h4>Content Goal:</h4>
+                    <p>Meet them in the emotion, validate the feelings, pivot to "what's next." This is NOT the time for "I told you so." It's time for empathy + solution.</p>
                 </div>
 
-                <div style="background: var(--light); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--primary);">Content Released:</strong>
-                    <ul style="padding-left: 1.5rem; color: var(--text);">
-                        <li>Video 3: "When the Report Card Is Worse Than Expected"</li>
-                        <li>Video 4: "If You're a Student Watching This..."</li>
-                    </ul>
+                <div class="message-box">
+                    <strong>Marketing Message:</strong> "This report card hurts. But it's not the final word. Here's what you do next."
                 </div>
             </div>
 
             <!-- PHASE 3 -->
-            <div class="journey-phase">
-                <div class="phase-number">3</div>
+            <div class="phase-card">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <div class="phase-title">Post-Report Phase</div>
+                </div>
                 <span class="phase-tag">LATE MARCH • WEEK 4</span>
-                <h3>Recovery Phase</h3>
                 
-                <div class="emotion-state">
-                    <strong>Emotional State:</strong>
-                    Motivated, determined, ready to act BUT overwhelmed and unsure where to start.
+                <div class="phase-section">
+                    <h4>Emotional State:</h4>
+                    <p>Motivated, determined, ready to act OR overwhelmed and paralyzed</p>
                 </div>
 
-                <div class="pain-list">
-                    <strong>Pain Points:</strong>
+                <div class="phase-section">
+                    <h4>Pain Points:</h4>
                     <ul>
-                        <li>"I want to help but don't know where to start"</li>
-                        <li>"Which tutoring works? How do I know?"</li>
-                        <li>"I'm too far behind to catch up"</li>
+                        <li><strong>Parents:</strong> "I want to help but I don't know where to start. Tutoring? Which one? How do I know it'll work?"</li>
+                        <li><strong>Students:</strong> "I want to do better next term but I don't even know where I went wrong."</li>
                     </ul>
                 </div>
 
-                <div class="solution-preview">
-                    <strong>MathEtc Solution:</strong>
-                    Structured recovery plans. Custom learning paths. Progress tracking. Next term doesn't have to be a repeat IF you start now.
+                <div class="phase-section">
+                    <h4>Content Goal:</h4>
+                    <p>Provide the roadmap. Show the transformation. Remove the mystery around "what tutoring actually does." Make enrollment feel like the obvious next step.</p>
                 </div>
 
-                <div style="background: var(--light); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--primary);">Content Released:</strong>
-                    <ul style="padding-left: 1.5rem; color: var(--text);">
-                        <li>Video 5: "What to Actually Do After a Bad Report Card"</li>
-                        <li>Video 6: "Next Term, Different Story"</li>
-                    </ul>
+                <div class="message-box">
+                    <strong>Marketing Message:</strong> "Next term doesn't have to be a repeat. Here's exactly how MathEtc turns report card pain into progress."
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTENT PLAN -->
-    <section id="content" class="section">
-        <h2 class="section-title">Content Plan: 6 Cinematic Videos</h2>
-        <p class="section-intro">Talking-head format with dynamic angles, shot in a studio living room set. Authentic, relatable content creators addressing parents and students directly.</p>
+    <!-- PAIN-SOLUTION TABLE -->
+    <section id="pain-solution" class="section">
+        <h2 class="section-title">The Pain → Solution Progression</h2>
+        <p class="section-intro">How we address each pain area with MathEtc's unique value proposition.</p>
 
-        <div class="content-grid">
+        <table class="pain-solution-table">
+            <thead>
+                <tr>
+                    <th>Pain Area</th>
+                    <th>Emotional Trigger</th>
+                    <th>MathEtc Solution</th>
+                    <th>Content Angle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Uncertainty Before Report</strong></td>
+                    <td>"I have a bad feeling but no proof"</td>
+                    <td>Early intervention catches problems before they become disasters</td>
+                    <td><em>"Trust your gut. The report card won't surprise you—it'll confirm what you already sense."</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Last-Minute Panic</strong></td>
+                    <td>"I should have done something sooner"</td>
+                    <td>It's never too late to start; 6-8 weeks can create visible change</td>
+                    <td><em>"Regret is normal. Action is better."</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Shame/Disappointment</strong></td>
+                    <td>"My child is failing and I feel like I failed too"</td>
+                    <td>We don't judge. We diagnose and fix.</td>
+                    <td><em>"A bad report card is data, not a verdict."</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Confusion About Next Steps</strong></td>
+                    <td>"I want to help but don't know how"</td>
+                    <td>Structured, diagnostic tutoring that finds the root gaps</td>
+                    <td><em>"You don't need to have all the answers. You just need the right support system."</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Student Overwhelm</strong></td>
+                    <td>"I'm too far behind to catch up"</td>
+                    <td>Step-by-step rebuilding from the foundation</td>
+                    <td><em>"You're not behind. You're at the starting line of your comeback."</em></td>
+                </tr>
+                <tr>
+                    <td><strong>Fear of Wasting Money</strong></td>
+                    <td>"What if tutoring doesn't work?"</td>
+                    <td>Progress tracking, measurable improvement, customized approach</td>
+                    <td><em>"We don't just teach. We track, adjust, and prove progress."</em></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 6 VIDEO CONTENT PLAN -->
+    <section id="content" class="section">
+        <h2 class="section-title">Content Campaign Structure: 6 Videos</h2>
+        <p class="section-intro">Cinematic storytelling via young creators (25-28 yrs old) speaking directly to camera. Studio-shot with dynamic angles, emotionally resonant, authentic.</p>
+
+        <div class="video-grid">
             <!-- VIDEO 1 -->
-            <div class="content-card">
-                <div class="content-header">
+            <div class="video-card">
+                <div class="video-header">
                     <div class="video-number">1</div>
-                    <div class="content-phase-label">PHASE 1: ANTICIPATION</div>
+                    <div class="video-phase-label">PHASE 1: ANTICIPATION</div>
                     <h3>"That Feeling You're Ignoring"</h3>
                 </div>
-                <div class="content-body">
-                    <span class="target-audience">👥 Target: Parents</span>
+                <div class="video-body">
+                    <span class="target-badge">👥 Target: Parents</span>
                     
                     <div class="hook-quote">
                         "You already know. You're just waiting for the report card to make it official."
                     </div>
 
-                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Creator addresses the gut feeling parents have when something's wrong academically but they're choosing to "wait and see" instead of acting.</p>
+                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Young creator talking directly to camera about the subtle signs parents miss or ignore — kid suddenly "busy" when you ask about school, grades slowly slipping, excuses piling up. NOT told from a parent character's POV but AS a person who sees it happening in their family/community.</p>
 
-                    <div class="content-meta">
-                        <div class="meta-field">
-                            <strong>Pain Addressed</strong>
-                            <span>Uncertainty, denial, waiting until crisis</span>
+                    <div class="video-details">
+                        <div class="detail-item">
+                            <strong>PAIN ADDRESSED</strong>
+                            <span>Gut feeling that something's wrong but choosing to "wait and see"</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>CTA</strong>
-                            <span>Link to assessment quiz</span>
+                        <div class="detail-item">
+                            <strong>CTA SEED</strong>
+                            <span>"What if you didn't wait? What if you handled it now, while there's still time to turn the term around?"</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>Release</strong>
-                            <span>Week 1 - Early March</span>
-                        </div>
-                        <div class="meta-field">
-                            <strong>MathEtc Mention</strong>
-                            <span>Subtle/Organic</span>
+                        <div class="detail-item">
+                            <strong>MATHETC MENTION</strong>
+                            <span>Subtle. "I've been telling my sister about MathEtc because her son's been acting exactly like this…"</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO 2 -->
-            <div class="content-card">
-                <div class="content-header">
+            <div class="video-card">
+                <div class="video-header">
                     <div class="video-number">2</div>
-                    <div class="content-phase-label">PHASE 1: ANTICIPATION</div>
+                    <div class="video-phase-label">PHASE 1: ANTICIPATION</div>
                     <h3>"The Pressure They Won't Tell You About"</h3>
                 </div>
-                <div class="content-body">
-                    <span class="target-audience">👥 Target: Parents (about students)</span>
+                <div class="video-body">
+                    <span class="target-badge">👥 Target: Parents (about their kids) + Students</span>
                     
                     <div class="hook-quote">
                         "Your kid says they're fine. They're not fine."
                     </div>
 
-                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Unpacking the silent pressure students face—shame of falling behind, anxiety of disappointing parents, isolation of struggling alone.</p>
+                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Creator unpacking the internal pressure students face during report card season — the shame of falling behind, the anxiety of disappointing parents, the isolation of feeling like everyone else "gets it" except them. This builds empathy and urgency.</p>
 
-                    <div class="content-meta">
-                        <div class="meta-field">
-                            <strong>Pain Addressed</strong>
-                            <span>Student stress invisibility</span>
+                    <div class="video-details">
+                        <div class="detail-item">
+                            <strong>PAIN ADDRESSED</strong>
+                            <span>Students are silently drowning under pressure and parents don't realize how bad it is</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>CTA</strong>
-                            <span>Free consultation offer</span>
+                        <div class="detail-item">
+                            <strong>CTA SEED</strong>
+                            <span>"If your child is withdrawn, irritable, or avoiding school talk… that's not attitude. That's stress. And stress without support becomes failure."</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>Release</strong>
-                            <span>Week 2 - Early March</span>
-                        </div>
-                        <div class="meta-field">
-                            <strong>MathEtc Mention</strong>
-                            <span>Moderate (testimonial style)</span>
+                        <div class="detail-item">
+                            <strong>MATHETC MENTION</strong>
+                            <span>Moderate. "When my cousin started tutoring with MathEtc, it wasn't just about the grades. It was the first time in months she didn't feel like she was failing alone."</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO 3 -->
-            <div class="content-card">
-                <div class="content-header">
+            <div class="video-card">
+                <div class="video-header">
                     <div class="video-number">3</div>
-                    <div class="content-phase-label">PHASE 2: D-DAY</div>
-                    <h3>"When the Report Card Is Worse Than Expected"</h3>
+                    <div class="video-phase-label">PHASE 2: D-DAY</div>
+                    <h3>"When the Report Card Is Worse Than You Expected"</h3>
                 </div>
-                <div class="content-body">
-                    <span class="target-audience">👥 Target: Parents</span>
+                <div class="video-body">
+                    <span class="target-badge">👥 Target: Parents</span>
                     
                     <div class="hook-quote">
-                        "You open it. You freeze. And then you think: How did I miss this?"
+                        "You open it. You freeze. And then you think: <em>How did I miss this?</em>"
                     </div>
 
-                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Walking through the emotional aftermath—guilt spiral, anger, then the pivot: "This is just information. What you do with it is what matters."</p>
+                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Creator walking through the emotional aftermath of getting a bad report card — not as the parent, but as someone addressing parents directly. The blame spiral ("Was I too busy? Did I ask enough questions?"), the anger at the child, the anger at the school, the anger at yourself. Then the pivot: "But here's the truth — this report card is just information. What you do with it is what matters."</p>
 
-                    <div class="content-meta">
-                        <div class="meta-field">
-                            <strong>Pain Addressed</strong>
-                            <span>Shock, guilt, panic</span>
+                    <div class="video-details">
+                        <div class="detail-item">
+                            <strong>PAIN ADDRESSED</strong>
+                            <span>Shock, guilt, disappointment — the emotional gut punch of seeing bad grades</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>CTA</strong>
-                            <span>Book diagnostic session</span>
+                        <div class="detail-item">
+                            <strong>CTA SEED</strong>
+                            <span>"You have two choices. React emotionally and hope next term is different. Or respond strategically and <em>make</em> next term different."</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>Release</strong>
-                            <span>Week 3 - Report Week</span>
-                        </div>
-                        <div class="meta-field">
-                            <strong>MathEtc Mention</strong>
-                            <strong>Strong/Direct</strong>
+                        <div class="detail-item">
+                            <strong>MATHETC MENTION</strong>
+                            <span>Strong. "This is where parents I know turn to MathEtc. Not as punishment. As a plan. Because the next 6 weeks decide whether this was a wake-up call or the beginning of a longer slide."</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO 4 -->
-            <div class="content-card">
-                <div class="content-header">
+            <div class="video-card">
+                <div class="video-header">
                     <div class="video-number">4</div>
-                    <div class="content-phase-label">PHASE 2: D-DAY</div>
+                    <div class="video-phase-label">PHASE 2: D-DAY</div>
                     <h3>"If You're a Student Watching This..."</h3>
                 </div>
-                <div class="content-body">
-                    <span class="target-audience">👥 Target: Students</span>
+                <div class="video-body">
+                    <span class="target-badge">👥 Target: Students (but parents will watch too)</span>
                     
                     <div class="hook-quote">
-                        "You already know what it says. And you already feel terrible. Let's skip the guilt and talk about what's real."
+                        "You already know what the report card says. And you already feel terrible about it. So let's skip the guilt trip and talk about what's real."
                     </div>
 
-                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Speaking directly to students—validating shame, explaining the "stuck vs. dumb" reframe, showing how tutoring actually works.</p>
+                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Creator speaking <em>directly</em> to the student — validating the feeling of falling behind, the trap of avoiding the subjects you're weak in, the fear of asking for help because it feels like admitting you're stupid. Then the reframe: "You're not dumb. You're stuck. And stuck is fixable."</p>
 
-                    <div class="content-meta">
-                        <div class="meta-field">
-                            <strong>Pain Addressed</strong>
-                            <span>Student shame, helplessness</span>
+                    <div class="video-details">
+                        <div class="detail-item">
+                            <strong>PAIN ADDRESSED</strong>
+                            <span>The shame and helplessness of underperforming + the spiral of giving up</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>CTA</strong>
-                            <span>Share with parents / reach out</span>
+                        <div class="detail-item">
+                            <strong>CTA SEED</strong>
+                            <span>"Next term starts in a few weeks. You can go in hoping things magically get better, or you can go in prepared. One of those actually works."</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>Release</strong>
-                            <span>Week 3 - Report Week</span>
-                        </div>
-                        <div class="meta-field">
-                            <strong>MathEtc Mention</strong>
-                            <span>Strong/Authentic</span>
+                        <div class="detail-item">
+                            <strong>MATHETC MENTION</strong>
+                            <span>Strong/Authentic. "I know people who were failing Math in Term 1 and passed Term 2 because they got actual help. Not YouTube tutorials. Not cramming. Structured, personalized tutoring with MathEtc."</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO 5 -->
-            <div class="content-card">
-                <div class="content-header">
+            <div class="video-card">
+                <div class="video-header">
                     <div class="video-number">5</div>
-                    <div class="content-phase-label">PHASE 3: RECOVERY</div>
+                    <div class="video-phase-label">PHASE 3: RECOVERY</div>
                     <h3>"What to Actually Do After a Bad Report Card"</h3>
                 </div>
-                <div class="content-body">
-                    <span class="target-audience">👥 Target: Parents</span>
+                <div class="video-body">
+                    <span class="target-badge">👥 Target: Parents</span>
                     
                     <div class="hook-quote">
-                        "You've done the hard conversation. Now what?"
+                        "You've done the hard conversation. You've processed the disappointment. Now what?"
                     </div>
 
-                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Tactical, practical next steps. Breaking overwhelm into clear actions: identify weakest subjects, diagnose WHY, get structured support.</p>
+                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> Creator laying out the practical, strategic next steps. This is NOT emotional — it's tactical. What parents should be doing <em>this week</em> to set their child up for next term. Break the overwhelm into clear actions: 1) Identify the weakest subjects, 2) Find out <em>why</em> they're struggling, 3) Get external support that's diagnostic, not just "more homework."</p>
 
-                    <div class="content-meta">
-                        <div class="meta-field">
-                            <strong>Pain Addressed</strong>
-                            <span>Overwhelm, confusion about next steps</span>
+                    <div class="video-details">
+                        <div class="detail-item">
+                            <strong>PAIN ADDRESSED</strong>
+                            <span>Wanting to help but not knowing where to start; fear of choosing the wrong solution</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>CTA</strong>
-                            <span>Enroll now (limited March slots)</span>
+                        <div class="detail-item">
+                            <strong>CTA SEED</strong>
+                            <span>"Hoping your child figures it out on their own is not a strategy. Structure is. Support is."</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>Release</strong>
-                            <span>Week 4 - Post Report</span>
-                        </div>
-                        <div class="meta-field">
-                            <strong>MathEtc Mention</strong>
-                            <span>Direct/Specific</span>
+                        <div class="detail-item">
+                            <strong>MATHETC MENTION</strong>
+                            <span>Direct/Specific. "This is exactly what MathEtc does. They don't just tutor. They <em>audit</em> where the breakdown happened, build a custom learning plan, and work with your child consistently until the foundation is solid."</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO 6 -->
-            <div class="content-card">
-                <div class="content-header">
+            <div class="video-card">
+                <div class="video-header">
                     <div class="video-number">6</div>
-                    <div class="content-phase-label">PHASE 3: RECOVERY</div>
+                    <div class="video-phase-label">PHASE 3: RECOVERY</div>
                     <h3>"Next Term, Different Story"</h3>
                 </div>
-                <div class="content-body">
-                    <span class="target-audience">👥 Target: Students + Parents</span>
+                <div class="video-body">
+                    <span class="target-badge">👥 Target: Students + Parents</span>
                     
                     <div class="hook-quote">
                         "You don't have to repeat this term. You just have to do it differently."
                     </div>
 
-                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> The hope video. Comeback energy. Real example of improvement. "The next report card is being written right now."</p>
+                    <p style="margin: 1rem 0; color: var(--text);"><strong>Angle:</strong> This is the hope video. The "comeback is real" energy. Creator speaking to both students and parents — acknowledging that change is hard, improvement takes work, but it's absolutely possible <em>if</em> you start now and do it right. Share a real or realistic example: "I know someone who went from 38% in Math to 62% in one term. Not because they became a genius overnight. Because they got the right help and actually put in the work."</p>
 
-                    <div class="content-meta">
-                        <div class="meta-field">
-                            <strong>Pain Addressed</strong>
-                            <span>Lack of belief that change is possible</span>
+                    <div class="video-details">
+                        <div class="detail-item">
+                            <strong>PAIN ADDRESSED</strong>
+                            <span>Fear that nothing will change; lack of belief that improvement is possible</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>CTA</strong>
-                            <span>Start your comeback today</span>
+                        <div class="detail-item">
+                            <strong>CTA SEED</strong>
+                            <span>"The next report card is being written right now. Every session, every chapter, every question answered correctly is a step toward a different result. But you have to start."</span>
                         </div>
-                        <div class="meta-field">
-                            <strong>Release</strong>
-                            <span>Week 4 - End of March</span>
-                        </div>
-                        <div class="meta-field">
-                            <strong>MathEtc Mention</strong>
-                            <span>Full integration</span>
+                        <div class="detail-item">
+                            <strong>MATHETC MENTION</strong>
+                            <span>Full Integration. "MathEtc isn't magic. It's method. It's sitting with someone who knows how to teach, who won't skip over the hard parts, who will make sure you <em>actually understand</em> before moving forward."</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div style="background: var(--light); padding: 2rem; border-radius: 12px; margin-top: 3rem; border-left: 4px solid var(--accent);">
-            <h3 style="color: var(--primary); margin-bottom: 1rem;">Production Notes</h3>
-            <ul style="padding-left: 1.5rem; color: var(--text); line-height: 1.8;">
-                <li><strong>Format:</strong> Talking head with 2 consistent angles (MCU + wider/profile)</li>
-                <li><strong>Set:</strong> Studio living room corner—couch, side table, warm lighting, relatable not clinical</li>
-                <li><strong>Talent:</strong> Young content creators (25-28 yrs old), authentic not overly polished</li>
-                <li><strong>Secondary Clips:</strong> Close-ups of report cards, textbooks, phones, study materials—atmospheric not literal</li>
-                <li><strong>Tone:</strong> Empathetic, confident, action-oriented—emotional but not manipulative</li>
-                <li><strong>Music:</strong> Minimal. Ambient tones. Let silence breathe. Slightly warmer in Phase 3.</li>
+    <!-- PRODUCTION & PARTNERSHIP -->
+    <section id="production" class="section">
+        <h2 class="section-title">Production & Studio Partnership</h2>
+        <p class="section-intro">We're partnering with a professional studio in Nigeria for high-quality talking-head video production.</p>
+
+        <div class="studio-highlight">
+            <h3>🎬 Studio Partnership Details</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Professional video production studio in Nigeria specializing in cinematic talking-head content</p>
+            
+            <div class="studio-pricing">
+                <div class="price-box">
+                    <div class="description">First Package</div>
+                    <div class="amount">₦200,000</div>
+                    <div class="description">For 3 Videos</div>
+                </div>
+                <div class="price-box">
+                    <div class="description">Full Campaign</div>
+                    <div class="amount">₦400,000</div>
+                    <div class="description">For All 6 Videos</div>
+                </div>
+            </div>
+
+            <div class="shoot-schedule">
+                <h4>📅 Production Timeline</h4>
+                <div class="timeline-row">
+                    <div class="timeline-item">
+                        <div class="week">WEEK 1 OF MARCH</div>
+                        <div class="activity">🎥 Shooting Days</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="week">WEEK 2 OF MARCH</div>
+                        <div class="activity">✂️ Editing & Review</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="week">WEEK 2+ OF MARCH</div>
+                        <div class="activity">📤 Distribution Begins</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="production-grid">
+            <div class="production-card">
+                <h3>📹 Talking Head Format</h3>
+                <ul>
+                    <li><strong>Primary Angle:</strong> Medium close-up (MCU) — creator speaks directly to camera, intimate, conversational</li>
+                    <li><strong>Secondary Angle:</strong> Slightly wider or off-angle (over-shoulder, profile, pulled-back) — adds visual dynamic</li>
+                    <li><strong>Camera Movement:</strong> Subtle. Maybe a slow push-in during emotional peaks, a slight drift during reflective moments. Nothing gimmicky.</li>
+                </ul>
+            </div>
+
+            <div class="production-card">
+                <h3>🛋️ Studio Setup (Living Room Corner)</h3>
+                <ul>
+                    <li>Couch or comfy chair</li>
+                    <li>Warm, ambient lighting (ring light + practical lamps in the background)</li>
+                    <li>Books, plants, small decor — lived-in, relatable, not clinical</li>
+                    <li>Consistent across all 6 videos to build visual brand continuity</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="production-card" style="margin-top: 2rem;">
+            <h3>🎞️ Secondary Clips/B-Roll (All Shot in Studio)</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">These inserts are atmospheric, NOT literal scenes. They punctuate the monologue, give visual rest, and subtly reinforce the emotional beats.</p>
+            <ul>
+                <li>Close-ups of hands holding/opening a report card</li>
+                <li>Textbook pages, notebooks, pens, study materials</li>
+                <li>Phone screen showing messages, notifications, MathEtc website</li>
+                <li>A school bag on the floor</li>
+                <li>A calendar/planner being filled in</li>
+                <li>Empty chair at a desk (anticipation)</li>
+                <li>Two chairs at a table (tutoring session implication)</li>
             </ul>
         </div>
     </section>
 
-    <!-- TIMELINE & ROLLOUT -->
-    <section id="timeline" class="section">
-        <h2 class="section-title">Campaign Timeline & Rollout</h2>
-        <p class="section-intro">Strategic content release synchronized with emotional journey and paid amplification.</p>
+    <!-- BUDGET BREAKDOWN -->
+    <section id="budget" class="section">
+        <h2 class="section-title">Complete Budget Breakdown</h2>
+        <p class="section-intro">Full campaign investment including production, advertising, and operational costs.</p>
 
-        <div class="timeline-gantt">
-            <table class="gantt-table">
+        <div class="budget-overview">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.8rem;">Campaign Investment Summary</h3>
+            
+            <table class="budget-table">
                 <thead>
                     <tr>
-                        <th>Week</th>
-                        <th>Dates</th>
-                        <th>Content Released</th>
-                        <th>Marketing Focus</th>
-                        <th>Paid Amplification</th>
+                        <th>Budget Category</th>
+                        <th>Description</th>
+                        <th style="text-align: right;">Amount (₦)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Week 1</strong></td>
-                        <td>Mar 1-7</td>
-                        <td>
-                            <div>Video 1: "That Feeling You're Ignoring"</div>
-                        </td>
-                        <td>Organic awareness, teaser posts, creator shares</td>
-                        <td><span class="activity-bar low">LOW</span> Test organic reach</td>
+                        <td class="budget-category">Video Production</td>
+                        <td>Studio partnership for 6 talking-head videos</td>
+                        <td class="budget-amount">₦400,000</td>
                     </tr>
                     <tr>
-                        <td><strong>Week 2</strong></td>
-                        <td>Mar 8-14</td>
-                        <td>
-                            <div>Video 2: "The Pressure They Won't Tell You About"</div>
-                        </td>
-                        <td>Build anticipation, parent-focused messaging</td>
-                        <td><span class="activity-bar medium">MEDIUM</span> Boost best performer</td>
+                        <td class="budget-category">Facebook/Instagram Ads</td>
+                        <td>Paid social media amplification (4 weeks)</td>
+                        <td class="budget-amount">₦300,000</td>
                     </tr>
                     <tr>
-                        <td><strong>Week 3</strong></td>
-                        <td>Mar 15-21</td>
-                        <td>
-                            <div>Video 3: "When the Report Card Is Worse"</div>
-                            <div>Video 4: "If You're a Student Watching..."</div>
-                        </td>
-                        <td>Crisis support messaging, consultation booking push</td>
-                        <td><span class="activity-bar high">HIGH</span> Retarget engagers, conversion focus</td>
+                        <td class="budget-category">Google Ads</td>
+                        <td>Search & Display ads targeting report card keywords</td>
+                        <td class="budget-amount">₦200,000</td>
                     </tr>
                     <tr>
-                        <td><strong>Week 4</strong></td>
-                        <td>Mar 22-31</td>
-                        <td>
-                            <div>Video 5: "What to Actually Do"</div>
-                            <div>Video 6: "Next Term, Different Story"</div>
-                        </td>
-                        <td>Enrollment urgency, testimonials, limited slots messaging</td>
-                        <td><span class="activity-bar high">HIGH</span> Retarget all engagers who didn't convert</td>
+                        <td class="budget-category">Content Creator Fees</td>
+                        <td>2 creators @ ₦50K each for on-camera talent</td>
+                        <td class="budget-amount">₦100,000</td>
+                    </tr>
+                    <tr>
+                        <td class="budget-category">Landing Page Development</td>
+                        <td>Custom campaign landing page with quiz/forms</td>
+                        <td class="budget-amount">₦80,000</td>
+                    </tr>
+                    <tr>
+                        <td class="budget-category">Email Marketing Platform</td>
+                        <td>Email automation tools & campaign setup</td>
+                        <td class="budget-amount">₦40,000</td>
+                    </tr>
+                    <tr>
+                        <td class="budget-category">Graphic Design Assets</td>
+                        <td>Social media graphics, thumbnails, email headers</td>
+                        <td class="budget-amount">₦60,000</td>
+                    </tr>
+                    <tr>
+                        <td class="budget-category">Contingency Buffer</td>
+                        <td>10% buffer for unexpected costs/retargeting</td>
+                        <td class="budget-amount">₦120,000</td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td colspan="2"><strong>TOTAL CAMPAIGN BUDGET</strong></td>
+                        <td style="text-align: right; color: var(--naira);"><strong>₦1,300,000</strong></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;">
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Organic Strategy</h3>
-                <ul style="padding-left: 1.5rem; color: var(--text); line-height: 1.8;">
-                    <li>Creator posts to their own channels first</li>
-                    <li>MathEtc reposts with brand context</li>
-                    <li>Community engagement in comments</li>
-                    <li>Share to parent groups, local forums</li>
-                    <li>Email to existing database</li>
-                </ul>
+        <div class="conversion-split">
+            <div class="conversion-card">
+                <h4>Target Enrollment Goal</h4>
+                <div class="big-number">50</div>
+                <p style="color: var(--text-muted);">New students enrolled in March from this campaign</p>
             </div>
 
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Paid Strategy</h3>
-                <ul style="padding-left: 1.5rem; color: var(--text); line-height: 1.8;">
-                    <li>Facebook/Instagram: Parents 30-50 in Maryland</li>
-                    <li>Google Ads: "tutoring near me", "report card help"</li>
-                    <li>Retargeting: Video viewers who didn't convert</li>
-                    <li>Lookalike audiences of existing clients</li>
-                    <li>Geo-targeting 25-mile radius of service areas</li>
-                </ul>
+            <div class="conversion-card">
+                <h4>Cost Per Acquisition</h4>
+                <div class="big-number">₦26,000</div>
+                <p style="color: var(--text-muted);">Investment per enrolled student (₦1.3M ÷ 50 students)</p>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, var(--success), #00d4aa); color: white; padding: 2.5rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Projected ROI (Conservative Estimate)</h3>
+            <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.5rem;">Assuming average package value of ₦80,000/student for 3-month enrollment</p>
+            <div style="font-size: 3.5rem; font-weight: 800; margin: 1rem 0;">₦4,000,000</div>
+            <p style="font-size: 1.2rem; opacity: 0.95;">Total Revenue from 50 Enrollments</p>
+            <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
+                <strong style="font-size: 1.3rem;">Net Profit: ₦2,700,000</strong><br/>
+                <span style="font-size: 0.95rem; opacity: 0.9;">(207% ROI on campaign investment)</span>
             </div>
         </div>
     </section>
 
-    <!-- GEOGRAPHIC STRATEGY -->
-    <section id="locations" class="section">
-        <h2 class="section-title">Geographic Strategy: Maryland Focus</h2>
-        <p class="section-intro">Targeting the Baltimore-Washington corridor with in-person and online delivery options.</p>
+    <!-- EMAIL CAMPAIGN -->
+    <section id="email" class="section">
+        <h2 class="section-title">Email Marketing Campaign Strategy</h2>
+        <p class="section-intro">Parallel email campaign targeting existing database and captured leads from video content. Same emotional journey, different medium.</p>
 
-        <div class="location-overview">
-            <div class="service-list">
-                <h3>Primary Service Areas (12 Cities)</h3>
-                <div class="service-columns">
-                    <div class="service-item">Baltimore City</div>
-                    <div class="service-item">Silver Spring</div>
-                    <div class="service-item">Rockville</div>
-                    <div class="service-item">Bethesda</div>
-                    <div class="service-item">Columbia</div>
-                    <div class="service-item">Towson</div>
-                    <div class="service-item">Ellicott City</div>
-                    <div class="service-item">Annapolis</div>
-                    <div class="service-item">Gaithersburg</div>
-                    <div class="service-item">Frederick</div>
-                    <div class="service-item">Bowie</div>
-                    <div class="service-item">Laurel</div>
-                </div>
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 3rem;">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Email Campaign Structure</h3>
+            <p style="color: var(--text); margin-bottom: 1rem;"><strong>Total Emails:</strong> 6 (matching the 6-video structure)</p>
+            <p style="color: var(--text); margin-bottom: 1rem;"><strong>Frequency:</strong> 2 emails per week (Tuesday & Thursday at 7 PM)</p>
+            <p style="color: var(--text); margin-bottom: 1rem;"><strong>Target Lists:</strong></p>
+            <ul style="padding-left: 2rem; color: var(--text); line-height: 1.8;">
+                <li>Existing MathEtc customer database (parents of past/current students)</li>
+                <li>Website visitors who downloaded resources</li>
+                <li>Lead magnet captures from quiz/assessment</li>
+                <li>Social media video engagers (retargeted via email)</li>
+            </ul>
+        </div>
 
-                <div style="margin-top: 2rem; padding: 1rem; background: var(--light); border-radius: 8px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 0.5rem;">Targeting Parameters:</strong>
-                    <ul style="padding-left: 1.5rem; color: var(--text);">
-                        <li>25-mile radius from Baltimore, Silver Spring, Rockville</li>
-                        <li>Household income $75k+</li>
-                        <li>Parents of children aged 10-17</li>
-                        <li>Montgomery, Howard, Baltimore, Anne Arundel Counties</li>
-                    </ul>
+        <div class="email-grid">
+            <!-- EMAIL 1 -->
+            <div class="email-card">
+                <h3>Email 1: "Is Your Child Quietly Struggling?"</h3>
+                <div class="email-meta">
+                    <span class="email-badge">Week 1 • Tuesday</span>
+                    <span class="email-badge">Target: All Parents</span>
+                    <span class="email-badge">Phase: Anticipation</span>
                 </div>
+                <div class="email-subject">
+                    <strong>Subject Line:</strong> "That gut feeling you've been ignoring... (it's real)"
+                </div>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>Content Angle:</strong> Opens with relatable scenario — child avoiding homework conversations, grades slowly slipping, excuses piling up. Validates parent's instinct that something's off. Introduces the idea that waiting for the report card is reactive, not proactive.</p>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>CTA:</strong> "Take our 2-minute Parent Assessment Quiz" (captures lead, segments by concern level)</p>
             </div>
 
-            <div class="delivery-modes">
-                <div class="mode-card">
-                    <h4>🏠 In-Person Tutoring</h4>
-                    <p>Personalized sessions in comfortable learning environments. Small group or one-on-one. Available across all 12 service areas.</p>
-                    <span class="mode-badge">Primary offering</span>
+            <!-- EMAIL 2 -->
+            <div class="email-card">
+                <h3>Email 2: "What Your Child Won't Tell You"</h3>
+                <div class="email-meta">
+                    <span class="email-badge">Week 1 • Thursday</span>
+                    <span class="email-badge">Target: All Parents</span>
+                    <span class="email-badge">Phase: Anticipation</span>
                 </div>
+                <div class="email-subject">
+                    <strong>Subject Line:</strong> "Your child says 'I'm fine.' Here's what that really means."
+                </div>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>Content Angle:</strong> Unpacks the silent stress students carry — shame of falling behind, fear of disappointing parents, isolation. Positions MathEtc as the support system that takes pressure OFF the parent-child relationship by providing external, judgment-free help.</p>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>CTA:</strong> "Watch: The Pressure They Won't Tell You About" (links to Video 2)</p>
+            </div>
 
-                <div class="mode-card">
-                    <h4>💻 Online Sessions</h4>
-                    <p>Same quality instruction from anywhere. Perfect for busy schedules, makeup sessions, or families outside our physical radius.</p>
-                    <span class="mode-badge">Statewide availability</span>
+            <!-- EMAIL 3 -->
+            <div class="email-card">
+                <h3>Email 3: "Report Cards Are Coming"</h3>
+                <div class="email-meta">
+                    <span class="email-badge">Week 2 • Tuesday</span>
+                    <span class="email-badge">Target: Quiz completers + High concern segment</span>
+                    <span class="email-badge">Phase: D-Day Prep</span>
                 </div>
+                <div class="email-subject">
+                    <strong>Subject Line:</strong> "Report cards drop this week. Here's what to do if it's bad news."
+                </div>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>Content Angle:</strong> Acknowledges the anxiety of waiting. Provides a "what to do if..." framework: If the report is worse than expected, here are the next 3 steps. Positions MathEtc as Step 1 (diagnose the root problem).</p>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>CTA:</strong> "Book a Free Diagnostic Session (Before Results Day)" — urgency play</p>
+            </div>
 
-                <div class="mode-card">
-                    <h4>🔄 Hybrid Model</h4>
-                    <p>Combine in-person for foundational work and online for flexibility. Many families use this for consistency during sports seasons, illness, etc.</p>
-                    <span class="mode-badge">Maximum flexibility</span>
+            <!-- EMAIL 4 -->
+            <div class="email-card">
+                <h3>Email 4: "After the Report Card Shock"</h3>
+                <div class="email-meta">
+                    <span class="email-badge">Week 3 • Tuesday</span>
+                    <span class="email-badge">Target: All segments</span>
+                    <span class="email-badge">Phase: D-Day</span>
                 </div>
+                <div class="email-subject">
+                    <strong>Subject Line:</strong> "You opened it. You froze. Now what?"
+                </div>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>Content Angle:</strong> This email meets parents in the immediate aftermath. Validates the emotional response (guilt, disappointment, anger). Then pivots hard: "This is information, not a verdict. What you do in the next 48 hours determines whether this is a wake-up call or the start of a slide."</p>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>CTA:</strong> "Schedule Emergency Recovery Session" — time-sensitive offer</p>
+            </div>
+
+            <!-- EMAIL 5 -->
+            <div class="email-card">
+                <h3>Email 5: "The Recovery Roadmap"</h3>
+                <div class="email-meta">
+                    <span class="email-badge">Week 3 • Thursday</span>
+                    <span class="email-badge">Target: Video viewers + Email openers from Email 4</span>
+                    <span class="email-badge">Phase: Recovery</span>
+                </div>
+                <div class="email-subject">
+                    <strong>Subject Line:</strong> "You've had the hard conversation. Here's the actual plan."
+                </div>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>Content Angle:</strong> Tactical, step-by-step breakdown. Not emotional, just practical. "Here's what parents who successfully turned this around did: 1) Identified weakest subjects, 2) Found diagnostic tutoring, 3) Committed to 6-8 weeks of consistency." Case study or testimonial snippet.</p>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>CTA:</strong> "Get Your Custom Recovery Plan" — link to booking with intake form</p>
+            </div>
+
+            <!-- EMAIL 6 -->
+            <div class="email-card">
+                <h3>Email 6: "Next Term Starts Now"</h3>
+                <div class="email-meta">
+                    <span class="email-badge">Week 4 • Tuesday</span>
+                    <span class="email-badge">Target: All engaged segments</span>
+                    <span class="email-badge">Phase: Final Push</span>
+                </div>
+                <div class="email-subject">
+                    <strong>Subject Line:</strong> "Your child's next report card is being written right now."
+                </div>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>Content Angle:</strong> Hope + urgency. Real example of transformation (38% to 62% in one term). "This didn't happen by accident. It happened because of structure, support, and starting NOW. Not next month. Not after another bad test. Now." Final enrollment push with scarcity (limited March slots).</p>
+                <p style="margin: 1rem 0; color: var(--text);"><strong>CTA:</strong> "Secure Your Spot — March Enrollment Ends Soon"</p>
             </div>
         </div>
 
         <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 3rem;">
-            <h3 style="color: var(--primary); margin-bottom: 1rem;">Why Maryland? Why March?</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                <div>
-                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Market Opportunity</h4>
-                    <ul style="padding-left: 1.5rem; color: var(--text); line-height: 1.8;">
-                        <li>High median household income</li>
-                        <li>Strong education prioritization</li>
-                        <li>Competitive school districts</li>
-                        <li>Dense suburban population</li>
-                    </ul>
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Email Campaign Success Metrics</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--accent);">25%+</div>
+                    <div style="color: var(--text-muted);">Open Rate Target</div>
                 </div>
-                <div>
-                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Timing Rationale</h4>
-                    <ul style="padding-left: 1.5rem; color: var(--text); line-height: 1.8;">
-                        <li>Report cards typically drop mid-March</li>
-                        <li>6-8 weeks remain until year-end exams</li>
-                        <li>Parents actively seeking solutions</li>
-                        <li>High intent decision-making window</li>
-                    </ul>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--accent);">8%+</div>
+                    <div style="color: var(--text-muted);">Click-Through Rate</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--accent);">100+</div>
+                    <div style="color: var(--text-muted);">Consultation Bookings</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--accent);">20+</div>
+                    <div style="color: var(--text-muted);">Direct Enrollments</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SUCCESS METRICS -->
+    <!-- CTA STRATEGY -->
+    <section id="cta" class="section">
+        <h2 class="section-title">Call-to-Action Strategy</h2>
+        <p class="section-intro">How we drive conversions across each phase with escalating urgency.</p>
+
+        <table class="cta-table">
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>CTA Type</th>
+                    <th>Message</th>
+                    <th>Mechanic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Anticipation</strong><br/><small>Week 1-2</small></td>
+                    <td><span class="cta-badge soft">SOFT</span></td>
+                    <td>"Don't wait for the damage to be done."</td>
+                    <td>Link to blog/quiz: "Is your child struggling? Take this 2-min assessment."</td>
+                </tr>
+                <tr>
+                    <td><strong>D-Day</strong><br/><small>Week 3</small></td>
+                    <td><span class="cta-badge medium">MEDIUM</span></td>
+                    <td>"This is the moment. Don't waste it."</td>
+                    <td>Link to free consultation: "Book a free diagnostic session this week."</td>
+                </tr>
+                <tr>
+                    <td><strong>Post-Report</strong><br/><small>Week 4</small></td>
+                    <td><span class="cta-badge hard">HARD</span></td>
+                    <td>"Next term starts now. Get started."</td>
+                    <td>Link to enrollment: "Limited March slots available. Secure your spot."</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 3rem;">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Enrollment Incentives (Optional but Powerful)</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="border-left: 4px solid var(--success); padding: 1rem; background: var(--light);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Early Bird March Offer</h4>
+                    <p style="color: var(--text);">"Enroll before March 20th and get your first assessment session free + customized study plan"</p>
+                </div>
+                <div style="border-left: 4px solid var(--warning); padding: 1rem; background: var(--light);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Report Card Rescue Package</h4>
+                    <p style="color: var(--text);">"Bring your report card to your first session and get a free diagnostic report identifying exact knowledge gaps"</p>
+                </div>
+                <div style="border-left: 4px solid var(--accent); padding: 1rem; background: var(--light);">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Progress Guarantee</h4>
+                    <p style="color: var(--text);">"If we don't see measurable improvement in 6 weeks, get 2 additional sessions free"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS -->
     <section id="metrics" class="section">
         <h2 class="section-title">Success Metrics & KPIs</h2>
-        <p class="section-intro">How we measure campaign effectiveness across awareness, engagement, and conversion.</p>
+        <p class="section-intro">How we measure campaign effectiveness across awareness, engagement, consideration, and conversion.</p>
 
         <div class="metrics-grid">
-            <div class="metric-card">
+            <div class="metric-box">
                 <div class="metric-icon">👁️</div>
-                <div class="metric-value">250K+</div>
-                <div class="metric-label">Total Video Views Target</div>
+                <div class="metric-value">150K+</div>
+                <div class="metric-label">Total Video Views</div>
             </div>
 
-            <div class="metric-card">
+            <div class="metric-box">
                 <div class="metric-icon">💬</div>
-                <div class="metric-value">5K+</div>
-                <div class="metric-label">Engaged Users (Comments/Shares/Saves)</div>
+                <div class="metric-value">3K+</div>
+                <div class="metric-label">Engaged Users (Comments/Shares)</div>
             </div>
 
-            <div class="metric-card">
+            <div class="metric-box">
                 <div class="metric-icon">🔗</div>
-                <div class="metric-value">2K+</div>
+                <div class="metric-value">1.5K+</div>
                 <div class="metric-label">Link Clicks to Landing Page</div>
             </div>
 
-            <div class="metric-card">
+            <div class="metric-box">
                 <div class="metric-icon">📋</div>
-                <div class="metric-value">500+</div>
+                <div class="metric-value">400+</div>
                 <div class="metric-label">Assessment Quiz Completions</div>
             </div>
 
-            <div class="metric-card">
+            <div class="metric-box">
+                <div class="metric-icon">📧</div>
+                <div class="metric-value">25%+</div>
+                <div class="metric-label">Email Open Rate</div>
+            </div>
+
+            <div class="metric-box">
                 <div class="metric-icon">📞</div>
-                <div class="metric-value">150+</div>
+                <div class="metric-value">120+</div>
                 <div class="metric-label">Free Consultation Bookings</div>
             </div>
 
-            <div class="metric-card">
+            <div class="metric-box">
                 <div class="metric-icon">✅</div>
                 <div class="metric-value">50+</div>
                 <div class="metric-label">New Enrollments (March)</div>
             </div>
+
+            <div class="metric-box">
+                <div class="metric-icon">💰</div>
+                <div class="metric-value">207%</div>
+                <div class="metric-label">Projected ROI</div>
+            </div>
         </div>
 
         <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 3rem;">
-            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Conversion Funnel Breakdown</h3>
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">The Conversion Funnel</h3>
             <table style="width: 100%; border-collapse: collapse;">
                 <thead>
                     <tr style="background: var(--primary); color: white;">
                         <th style="padding: 1rem; text-align: left;">Stage</th>
-                        <th style="padding: 1rem; text-align: left;">Metric</th>
+                        <th style="padding: 1rem; text-align: left;">Key Metrics</th>
                         <th style="padding: 1rem; text-align: left;">Target</th>
                         <th style="padding: 1rem; text-align: left;">Measurement Tool</th>
                     </tr>
@@ -1576,20 +1731,20 @@
                 <tbody>
                     <tr style="border-bottom: 1px solid var(--light);">
                         <td style="padding: 1rem;"><strong>Awareness</strong></td>
-                        <td style="padding: 1rem;">Video Views, Reach, Impressions</td>
-                        <td style="padding: 1rem;">250K+ views</td>
-                        <td style="padding: 1rem;">Facebook Insights, YouTube Analytics</td>
+                        <td style="padding: 1rem;">Video views, reach, impressions</td>
+                        <td style="padding: 1rem;">150K+ views</td>
+                        <td style="padding: 1rem;">Facebook/Instagram/YouTube Analytics</td>
                     </tr>
                     <tr style="border-bottom: 1px solid var(--light);">
                         <td style="padding: 1rem;"><strong>Engagement</strong></td>
-                        <td style="padding: 1rem;">Comments, Shares, Saves, Watch Time</td>
-                        <td style="padding: 1rem;">5K+ engaged users</td>
-                        <td style="padding: 1rem;">Social analytics, engagement rate tracking</td>
+                        <td style="padding: 1rem;">Comments, shares, saves, email opens</td>
+                        <td style="padding: 1rem;">3K+ engaged users</td>
+                        <td style="padding: 1rem;">Social analytics, email platform metrics</td>
                     </tr>
                     <tr style="border-bottom: 1px solid var(--light);">
                         <td style="padding: 1rem;"><strong>Consideration</strong></td>
                         <td style="padding: 1rem;">Link clicks, quiz completions, page visits</td>
-                        <td style="padding: 1rem;">2K+ link clicks</td>
+                        <td style="padding: 1rem;">1.5K+ link clicks</td>
                         <td style="padding: 1rem;">Google Analytics, UTM tracking</td>
                     </tr>
                     <tr>
@@ -1603,185 +1758,98 @@
         </div>
     </section>
 
-    <!-- BUDGET & ROI -->
-    <section id="budget" class="section">
-        <h2 class="section-title">Investment & ROI Projection</h2>
-        <p class="section-intro">Estimated campaign costs and expected return based on conservative enrollment targets.</p>
+    <!-- CAMPAIGN TIMELINE -->
+    <section id="timeline" class="section">
+        <h2 class="section-title">Campaign Rollout Timeline</h2>
+        <p class="section-intro">Strategic content release synchronized with emotional journey and paid amplification.</p>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
-            <!-- COSTS -->
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Estimated Costs</h3>
-                <table style="width: 100%;">
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;"><strong>Content Production</strong></td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$3,000</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Studio rental (4 days)</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$800</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Creator fees (2 creators x 3 sessions)</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$1,200</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Videographer & editing</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$1,000</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;"><strong>Paid Advertising</strong></td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$4,000</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Facebook/Instagram Ads</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$2,500</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Google Ads</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$1,500</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;"><strong>Tech & Tools</strong></td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$500</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Landing page development</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$300</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Quiz/form tools</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$200</td>
-                    </tr>
-                    <tr style="border-bottom: 2px solid var(--primary);">
-                        <td style="padding: 1rem 0;"><strong>TOTAL CAMPAIGN COST</strong></td>
-                        <td style="padding: 1rem 0; text-align: right; font-size: 1.3rem; font-weight: 800; color: var(--primary);">$7,500</td>
-                    </tr>
-                </table>
-            </div>
+        <table class="timeline-table">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Dates</th>
+                    <th>Content Released</th>
+                    <th>Marketing Focus</th>
+                    <th>Paid Amplification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Week 1</strong></td>
+                    <td>Mar 3-9</td>
+                    <td>
+                        <div>📹 Video 1: "That Feeling You're Ignoring"</div>
+                        <div>📧 Email 1: "Is Your Child Quietly Struggling?"</div>
+                        <div>📧 Email 2: "What Your Child Won't Tell You"</div>
+                    </td>
+                    <td>Organic awareness, teaser posts, creator shares, quiz promotion</td>
+                    <td><span class="amplification-badge low">LOW</span> Test organic reach first</td>
+                </tr>
+                <tr>
+                    <td><strong>Week 2</strong></td>
+                    <td>Mar 10-16</td>
+                    <td>
+                        <div>📹 Video 2: "The Pressure They Won't Tell You"</div>
+                        <div>📧 Email 3: "Report Cards Are Coming"</div>
+                    </td>
+                    <td>Build anticipation, parent-focused messaging, free consultation offer</td>
+                    <td><span class="amplification-badge medium">MEDIUM</span> Boost best-performing video</td>
+                </tr>
+                <tr>
+                    <td><strong>Week 3</strong></td>
+                    <td>Mar 17-23</td>
+                    <td>
+                        <div>📹 Video 3: "When the Report Card Is Worse"</div>
+                        <div>📹 Video 4: "If You're a Student Watching..."</div>
+                        <div>📧 Email 4: "After the Report Card Shock"</div>
+                        <div>📧 Email 5: "The Recovery Roadmap"</div>
+                    </td>
+                    <td>Crisis support messaging, consultation booking push, retargeting</td>
+                    <td><span class="amplification-badge high">HIGH</span> Retarget engagers, conversion focus</td>
+                </tr>
+                <tr>
+                    <td><strong>Week 4</strong></td>
+                    <td>Mar 24-31</td>
+                    <td>
+                        <div>📹 Video 5: "What to Actually Do"</div>
+                        <div>📹 Video 6: "Next Term, Different Story"</div>
+                        <div>📧 Email 6: "Next Term Starts Now"</div>
+                    </td>
+                    <td>Enrollment urgency, testimonials, limited slots messaging, scarcity tactics</td>
+                    <td><span class="amplification-badge high">HIGH</span> Retarget all engagers who didn't convert</td>
+                </tr>
+            </tbody>
+        </table>
 
-            <!-- ROI -->
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Projected ROI</h3>
-                <table style="width: 100%;">
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;"><strong>Target Enrollments</strong></td>
-                        <td style="padding: 0.75rem 0; text-align: right;">50 students</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Avg. package value</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">$400/month</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 0.75rem 0;">Avg. retention</td>
-                        <td style="padding: 0.75rem 0; text-align: right;">3 months</td>
-                    </tr>
-                    <tr style="border-bottom: 2px solid var(--success); background: #f0fff4;">
-                        <td style="padding: 1rem 0;"><strong>First Quarter Revenue</strong></td>
-                        <td style="padding: 1rem 0; text-align: right; font-size: 1.3rem; font-weight: 800; color: var(--success);">$60,000</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 1rem 0;">Campaign cost</td>
-                        <td style="padding: 1rem 0; text-align: right;">- $7,500</td>
-                    </tr>
-                    <tr style="border-bottom: 2px solid var(--primary); background: var(--light);">
-                        <td style="padding: 1rem 0;"><strong>NET PROFIT (Q1)</strong></td>
-                        <td style="padding: 1rem 0; text-align: right; font-size: 1.5rem; font-weight: 800; color: var(--primary);">$52,500</td>
-                    </tr>
-                </table>
-
-                <div style="margin-top: 2rem; padding: 1rem; background: #fff3cd; border-radius: 8px; border-left: 3px solid var(--warning);">
-                    <strong style="color: var(--warning);">Conservative Estimate:</strong>
-                    <p style="margin-top: 0.5rem; color: var(--text);">This assumes 50 enrollments. If we hit 75 (moderate success), Q1 revenue jumps to $90K with net profit of $82.5K — an 11x ROI.</p>
+        <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 3rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Why This Roadmap Works</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✅</div>
+                    <strong>Emotional Arc</strong>
+                    <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Meets the audience where they are emotionally, journey by journey</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🤝</div>
+                    <strong>Trust Building</strong>
+                    <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Creator isn't selling — they're relating and then guiding</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⏰</div>
+                    <strong>Timely Relevance</strong>
+                    <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Tied to a real, recurring event that triggers action</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎯</div>
+                    <strong>Clear Path to Action</strong>
+                    <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">Every video logically leads to "here's what you do next"</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔄</div>
+                    <strong>Scalable & Repeatable</strong>
+                    <p style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.5rem;">This same roadmap works every term, every year</p>
                 </div>
             </div>
-        </div>
-
-        <div style="background: linear-gradient(135deg, var(--success), #00d4aa); color: white; padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
-            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Cost Per Acquisition (CPA)</h3>
-            <div style="font-size: 3rem; font-weight: 800; margin: 1rem 0;">$150</div>
-            <p style="font-size: 1.1rem; opacity: 0.95;">At 50 enrollments, we acquire each student for $150. Their lifetime value (3 months avg) is $1,200. That's an 8x return per student.</p>
-        </div>
-    </section>
-
-    <!-- APPROVAL & NEXT STEPS -->
-    <section id="approval" class="section">
-        <h2 class="section-title">Approval & Next Steps</h2>
-        <p class="section-intro">What needs to happen to launch this campaign by March 1, 2025.</p>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
-                <h4 style="color: var(--primary); margin-bottom: 1rem;">Immediate Actions</h4>
-                <ul style="list-style: none; padding: 0; color: var(--text); text-align: left;">
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Team review & feedback</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Budget approval</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Creator identification</li>
-                    <li style="padding: 0.5rem 0;">✓ Studio booking</li>
-                </ul>
-            </div>
-
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🎬</div>
-                <h4 style="color: var(--primary); margin-bottom: 1rem;">Production Phase</h4>
-                <ul style="list-style: none; padding: 0; color: var(--text); text-align: left;">
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Script finalization (Week of Feb 10)</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Shoot days (Feb 17-20)</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Editing & review (Feb 21-26)</li>
-                    <li style="padding: 0.5rem 0;">✓ Final assets delivered (Feb 28)</li>
-                </ul>
-            </div>
-
-            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
-                <h4 style="color: var(--primary); margin-bottom: 1rem;">Launch Phase</h4>
-                <ul style="list-style: none; padding: 0; color: var(--text); text-align: left;">
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Landing page live (Feb 28)</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Ads setup & testing (Feb 28-29)</li>
-                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Video 1 goes live (March 1)</li>
-                    <li style="padding: 0.5rem 0;">✓ Full campaign rolling (March 1-31)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 3rem;">
-            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Risk Mitigation</h3>
-            <table style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr style="background: var(--light);">
-                        <th style="padding: 1rem; text-align: left;">Potential Risk</th>
-                        <th style="padding: 1rem; text-align: left;">Mitigation Strategy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 1rem;">Content doesn't resonate organically</td>
-                        <td style="padding: 1rem;">Front-load paid amplification in Week 2-3; boost best performers</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 1rem;">Report card dates vary by district</td>
-                        <td style="padding: 1rem;">Target mid-March as average; messaging works pre/during/post regardless</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--light);">
-                        <td style="padding: 1rem;">Lower than expected conversion rate</td>
-                        <td style="padding: 1rem;">Aggressive retargeting Week 3-4; offer limited-time enrollment incentive</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 1rem;">Production delays</td>
-                        <td style="padding: 1rem;">Build 1-week buffer into timeline; prioritize Phase 1 videos for on-time launch</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="action-buttons">
-            <button class="btn btn-success" onclick="alert('Campaign approved! Proceeding to production phase.')">✓ Approve Campaign</button>
-            <button class="btn btn-secondary" onclick="alert('Feedback mode activated. Please provide comments below.')">💬 Provide Feedback</button>
-            <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Export PDF</button>
-        </div>
-
-        <div style="margin-top: 3rem; padding: 2rem; background: var(--light); border-radius: 12px; text-align: center;">
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Questions? Contact the campaign lead at <strong>strategy@mathetc.com</strong> or schedule a review meeting.</p>
         </div>
     </section>
 
@@ -1816,17 +1884,12 @@
                 const targetId = item.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId);
                 
-                window.scrollTo({
-                    top: targetSection.offsetTop - 60,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // EXPANDABLE SECTIONS
-        document.querySelectorAll('.expandable').forEach(item => {
-            item.addEventListener('click', function() {
-                this.classList.toggle('expanded');
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
